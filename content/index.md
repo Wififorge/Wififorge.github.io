@@ -1,4 +1,4 @@
-# Welcome to the Documentation for all things Wifi Forge
+# Welcome to the Documentation for all things Wifi Forge 🛜
 
 ## Need help getting the tool working?
 
