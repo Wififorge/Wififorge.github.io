@@ -11,7 +11,7 @@ Run the following command in this terminal to crack the key associated with the 
 aircrack-ng -w /Wifi-Forge/Framework/materials/rockyou.txt /Wifi-Forge/Framework/loot/4whs
 ```
 
-aircrack will ask find all the networks in the capture and ask which network the hash is associated with. Input the number associated with the WPA2_Network and hit enter. 
+aircrack will find all the networks in the capture and ask which network the hash is associated with. Input the number associated with the WPA2_Network and hit enter. 
 
 ![[Pasted image 20250121130642.png]]
 
