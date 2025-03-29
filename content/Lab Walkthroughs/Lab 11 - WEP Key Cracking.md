@@ -2,14 +2,14 @@ Select "WEP Attack" from the menu. Allow up to 30 seconds to initialize the netw
 
 ![[Pasted image 20250125094334.png]]
 
-Three panels will appear in your terminal representing an attacker's machine "a" and two victims (host1 and host2).
+Three panels will appear in your terminal representing an attacker's machine "Attacker" and two victims (host1 and host2).
 
 ![[Pasted image 20250125094541.png]]
 
 On the attacking machine, switch the interface to monitor mode using the following command. 
 
 ```
-airmon-ng start a-wlan0
+airmon-ng start Attacker-wlan0
 ```
 
 Successful output of the above command will appear as below. 
@@ -19,7 +19,7 @@ Successful output of the above command will appear as below.
 Use airodump-ng to begin looking for nearby networks. 
 
 ```
-airodump-ng a-wlan0mon
+airodump-ng wlan0mon
 ```
 
 Wait for traffic to appear on the console as seen below. 
@@ -29,7 +29,7 @@ Wait for traffic to appear on the console as seen below.
 Note the BSSID and channel before killing the process with \[CTRL + c]. Use this BSSID and channel in the next command. Replace \<CHANNEL> and \<BSSID> with the appropriate information. 
 
 ```
-airodump-ng -c <CHANNEL> --bssid <BSSID> a-wlan0mon -w attack_capture
+airodump-ng -c <CHANNEL> --bssid <BSSID> wlan0mon -w attack_capture
 ```
 
 As the above command runs, information regarding hosts connected to the target network will appear as seen below. 
