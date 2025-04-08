@@ -1,4 +1,4 @@
-The following walk through can be used to deploy Wifi Forge with minimal understanding and within minutes.
+The following walk through can be used to deploy WifiForge with minimal understanding and within minutes.
 ## Compatibility
 Wifi-Forge should work on any linux operating system using the docker image. The following Operating Systems have been tested and are confirmed to work.
 - Kali Linux 
@@ -11,22 +11,23 @@ To install docker run the following command:
 sudo apt update -y
 sudo apt install docker.io -y
 ```
-Then install Wifi Forge
+Then install WifiForge
 ```bash
 sudo docker pull redblackbird/wififorge:latest
 sudo docker run --privileged=true -it --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v /sys/:/sys -v /lib/modules/:/lib/modules/ --name mininet-wifi --network=host --hostname mininet-wifi redblackbird/wififorge:latest /bin/bash
 service openvswitch-switch start
-cd /Wifi-Forge/Framework/
+cd /WifiForge/
 sudo python3 WifiForge.py
 ```
 Installing the docker image can take up too an hour but averages 30 minutes.
+
 ## Installing from source
 This is less simple and may have more issues, however gives you more control over your experience.
 ```bash
-git clone https://github.com/her3ticAVI/Wifi-Forge
-cd Wifi-Forge/Framework/materials
+git clone https://github.com/blackhillsinfosec/WifiForge.git
+cd WifiForge/framework/setup
 sudo ./setup.sh
-cd ..
+cd ../..
 sudo python3 WifiForge.py
 ```
 Note: Installation may take a while, this tool is massive.

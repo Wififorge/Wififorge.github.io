@@ -1,12 +1,12 @@
-Select "Bettercap Recon" from the menu. Allow up to 30 seconds to initialize the network. 
+Select "Packet Capture To Hccapx Hashcat Cracking" from the menu. Allow up to 30 seconds to initialize the network. 
 
-![[Pasted image 20250318000618.png]]
+![[03-main-menu.png]]
 
-Two panes will appear in the resulting screen. One represents the attacking machine "**a**" (1). The other panel represents the host machine from which you will launch a browser session. 
+Two panes will appear in the resulting screen. One represents the attacking machine "**Attacker**". The other panel represents the host machine from which you will launch a browser session. 
 
-![[Pasted image 20250318000917.png]]
+![[03-terminals.png]]
 
-Click the area within the host_machine panel to ensure that the host machine terminal is selected. Type the following command to open a browser window. 
+Click the area within the "**host_machine**" panel to ensure that the host machine terminal is selected. Type the following command to open a browser window. 
 
 ```bash
 /Wifi-Forge/Framework/materials/browser linux
@@ -14,7 +14,7 @@ Click the area within the host_machine panel to ensure that the host machine ter
 
 Ignore any errors that appear on the command line. Wait for a chrome browser to appear as seen below.
 
-![[Pasted image 20250120133346.png]]
+![[03-browser.png]]
 
 Insert the following filepath into your browser.
 
@@ -24,11 +24,11 @@ file:///Wifi-Forge/Framework/materials/hashcat.net/cap2hashcat/index.html
 
 The following site will appear in the browser window. 
 
-![[Pasted image 20250120134259.png]]
+![[03-browser-hashcat.png]]
 
 Select browse, navigate to the /Wifi-Forge/Framework/loot/4whs file, and click convert.
 
-![[Pasted image 20250120135012.png]]
+![[03-browser-upload.png]]
 
 After clicking the convert button, click "Download." Close the Chrome window. 
 
@@ -42,12 +42,12 @@ hashcat -m22000 -a0 ~/Downloads/<YOUR-HCCAPX-HERE> /Wifi-Forge/Framework/materia
 
 The following will appear on your screen. Hashcat will attempt to crack the password using the hash we recovered in the last lab. Allow for a few minutes for it to iterate through all the possible passwords.
 
-![[Pasted image 20250121122737.png]]
+![[03-hashcat-running.png]]
 
 When it succeeds, the most likely passwords will be revealed (in this case, the password is december2022)
 
-![[Pasted image 20250121123108.png]]
+![[03-hashcat-results.png]]
 
-In either of the terminal panes, type main_menu to return to the main menu and onto the next lab. 
+In either of the terminal panes, type `main_menu` to return to the main menu and onto the next lab. 
 
 NEXT LAB: [[Lab 04 - Airsuite Tools - Recon and Pre-Shared Key Recovery]]

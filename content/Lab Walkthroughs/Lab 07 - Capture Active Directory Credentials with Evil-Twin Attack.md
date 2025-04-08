@@ -1,6 +1,6 @@
-Select "Eaphammer Cred Capture" from the menu. Allow up to 30 seconds to initialize the network. 
+Select "Evil Twin" from the menu. Allow up to 30 seconds to initialize the network. 
 
-![[Pasted image 20250125094159.png]]
+![[07-main-menu.png]]
 
 A single attacker pane will appear in your terminal. 
 
@@ -14,14 +14,13 @@ Run the following command to start Eaphammer.
 
 Running this command will result in the following output. The hashes should appear as seen below after being captured from an authenticating host. Allow up to a minute for this to occur. 
 
-![[Pasted image 20250121152304.png]]
-
+![[07-eaphammer.png]]
 The following will appear when the connection occurs. 
 
-![[Pasted image 20250121154336.png]]
+![[07-hashes.png]]
 
 Hashes are saved to /Wifi-Forge/Framework/loot/ under the filename wpa_handshake_capture\[date]\[random_string].
 
-Use the main_menu command to return to the main menu and onto the next lab.
+Use the `main_menu` command to return to the main menu and onto the next lab.
 
 NEXT LAB: [[Lab 07 - Capture Active Directory Credentials with Evil-Twin Attack]]
