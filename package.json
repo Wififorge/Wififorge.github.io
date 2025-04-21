@@ -47,7 +47,7 @@
     "d3": "^7.9.0",
     "esbuild": "^0.25.2",
     "esbuild-sass-plugin": "^3.3.1",
-    "flexsearch": "0.8.154",
+    "flexsearch": "0.8.158",
     "github-slugger": "^2.0.0",
     "globby": "^14.1.0",
     "gray-matter": "^4.0.3",
