@@ -8,7 +8,7 @@ A single attacker window will appear in your terminal.
 Run the following command in this terminal to crack the key associated with the WPA handshake collected from the bettercap lab. 
 
 ```
-aircrack-ng -w /Wifi-Forge/Framework/materials/rockyou.txt /Wifi-Forge/Framework/loot/4whs
+aircrack-ng -w /WifiForge/framework/lab_materials/rockyou.txt /Wifi-Forge/Framework/loot/4whs
 ```
 
 If your capture file contains multiple networks, aircrack will find all the networks in the capture and ask which network the hash is associated with. Input the number associated with the WPA2_Network and hit enter if you are prompted.

@@ -77,7 +77,7 @@ Wait until the first attacker terminal display the text highlighted in red below
 In either attacker terminal, use \[CTRL + C] to stop any running processes. Run the following command. 
 
 ```
-aircrack-ng -w /Wifi-Forge/Framework/materials/rockyou.txt ./wificap1-01.cap 
+aircrack-ng -w /WifiForge/framework/lab_materials/rockyou.txt ./wificap1-01.cap 
 ```
 
 It should not take long for aircrack to get the password.

@@ -9,7 +9,7 @@ Note: The software and methods used to create these labs are strictly limited to
 Run the following command to start Eaphammer. 
 
 ```
-/Wifi-Forge/Framework/materials/eaphammer -e CORP_NET --creds --interface a-wlan0
+/WifiForge/framework/lab_materials/eaphammer -e CORP_NET --creds --interface a-wlan0
 ```
 
 Running this command will result in the following output. The hashes should appear as seen below after being captured from an authenticating host. Allow up to a minute for this to occur. 
