@@ -1,6 +1,6 @@
 The following walk through can be used to deploy WifiForge with minimal understanding and within minutes.
 ## Compatibility
-Wifi-Forge should work on any linux operating system using the docker container. The following Operating Systems have been tested and are confirmed to work.
+WifiForge should work on any linux operating system using the docker container. The following Operating Systems have been tested and are confirmed to work.
 - Kali Linux 
 - Parrot OS
 - Ubuntu

@@ -26,7 +26,7 @@ The following site will appear in the browser window.
 
 ![[03-browser-hashcat.png]]
 
-Select browse, navigate to the /Wifi-Forge/Framework/loot/4whs file, and click convert.
+Select browse, navigate to the /WifiForge/Framework/loot/4whs file, and click convert.
 
 ![[03-browser-upload.png]]
 
@@ -37,7 +37,7 @@ Select your attacker machine by clicking in the top half of the terminal window.
 Within the attacker terminal, run the following command. Replace \<YOUR-HCCAPX-HERE\> with the HCCPAX file in your Downloads file. it will likely consist of a series of numbers with with the file type hc22000. 
 
 ```
-hashcat -m22000 -a0 ~/Downloads/<YOUR-HCCAPX-HERE> /WifiForge/framework/lab_materials/rockyou.txt --potfile-path /Wifi-Forge/Framework/loot/4whs.pot
+hashcat -m22000 -a0 ~/Downloads/<YOUR-HCCAPX-HERE> /WifiForge/framework/lab_materials/rockyou.txt --potfile-path /WifiForge/Framework/loot/4whs.pot
 ```
 
 The following will appear on your screen. Hashcat will attempt to crack the password using the hash we recovered in the last lab. Allow for a few minutes for it to iterate through all the possible passwords.

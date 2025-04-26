@@ -76,7 +76,7 @@ After running the commands, you should see the following on your screen.
 Set the handshakes file.
 
 ```bash
-set wifi.handshakes.file /Wifi-Forge/Framework/loot/4whs
+set wifi.handshakes.file /WifiForge/Framework/loot/4whs
 ```
 
 Finally, enable Wi-Fi recon:
