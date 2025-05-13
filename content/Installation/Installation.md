@@ -15,10 +15,14 @@ Then install WifiForge
 ```bash
 sudo docker pull redblackbird/wififorge:latest
 sudo docker run --privileged=true -it --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v /sys/:/sys -v /lib/modules/:/lib/modules/ --name mininet-wifi --network=host --hostname mininet-wifi redblackbird/wififorge:latest /bin/bash
-service openvswitch-switch start
 cd /WifiForge/
+```
+Once the docker is finished installing run the following two commands within the docker:
+```bash
+service openvswitch-switch start
 sudo python3 WifiForge.py
 ```
+
 Installing the docker container can take up too an hour but averages 30 minutes.
 
 ## Starting Existing Docker Container
@@ -34,6 +38,11 @@ git clone https://github.com/blackhillsinfosec/WifiForge.git
 cd WifiForge/framework/setup
 sudo ./setup.sh
 cd ../..
+```
+
+Once that completes run the following commands:
+```bash
+service openvswitch-switch start
 sudo python3 WifiForge.py
 ```
 Note: Installation may take a while, this tool is massive.
