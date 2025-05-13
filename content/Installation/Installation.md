@@ -38,11 +38,6 @@ git clone https://github.com/blackhillsinfosec/WifiForge.git
 cd WifiForge/framework/setup
 sudo ./setup.sh
 cd ../..
-```
-
-Once that completes run the following commands:
-```bash
-service openvswitch-switch start
 sudo python3 WifiForge.py
 ```
 Note: Installation may take a while, this tool is massive.
