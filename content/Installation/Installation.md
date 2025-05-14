@@ -15,10 +15,10 @@ Then install WifiForge
 ```bash
 sudo docker pull redblackbird/wififorge:latest
 sudo docker run --privileged=true -it --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v /sys/:/sys -v /lib/modules/:/lib/modules/ --name mininet-wifi --network=host --hostname mininet-wifi redblackbird/wififorge:latest /bin/bash
-cd /WifiForge/
 ```
 Once the docker is finished installing run the following two commands within the docker:
 ```bash
+cd /WifiForge/
 service openvswitch-switch start
 sudo python3 WifiForge.py
 ```
