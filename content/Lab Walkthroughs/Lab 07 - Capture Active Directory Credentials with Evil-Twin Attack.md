@@ -19,7 +19,7 @@ The following will appear when the connection occurs.
 
 ![[07-hashes.png]]
 
-Hashes are saved to /WifiForge/Framework/loot/ under the filename wpa_handshake_capture\[date]\[random_string].
+Hashes are saved to /WifiForge/framework/lab_materials/loot/ under the filename wpa_handshake_capture\[date]\[random_string].
 
 Use the `main_menu` command to return to the main menu and onto the next lab.
 
