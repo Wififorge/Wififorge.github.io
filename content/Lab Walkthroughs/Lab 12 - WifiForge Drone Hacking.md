@@ -1,16 +1,16 @@
 Select `Drone Hacking` from the menu. Allow a few seconds to initialize the network. 
 
-![[./drone1.png]]
+![](./drone1.png)
 
 Once complete, a tmux session will start with three panes. 
 
-![[./drone2.png]]
+![](./drone2.png)
 
 Feel free to resize the pane by dragging the borders around and start the graph that tracks drone positions by typing:
 
 `python3 WifiForge/framework/lab_materials/graph-drones.py`
 
-![[./drone3.png]]
+![](./drone3.png)
 
 In another pane, set your wireless interface to monitor mode. First, identify the interface name by typing:
 
@@ -18,7 +18,7 @@ In another pane, set your wireless interface to monitor mode. First, identify th
 
 For this example, the interface name is `Attacker-wlan0`.
 
-![[./drone4.png]]
+![](./drone4.png)
 
 After noting the interface name, start monitor mode by typing:
 
@@ -26,18 +26,18 @@ After noting the interface name, start monitor mode by typing:
 
 If prompted to automatically resolve any issues, type "y" and hit enter. 
 
-![[./drone5.png]]
-![[./drone6.png]]
+![](./drone5.png)
+![](./drone6.png)
 
 Verify the interface is now in monitor mode by running `iwconfig` again. The interface should be renamed to `wlan0mon`, and its `Mode:` should be set to `Monitor`.
 
-![[./drone7.png]]
+![](./drone7.png)
 
 With the device in monitor mode, run the following to scan for nearby wireless networks:
 
 `airodump-ng wlan0mon`
 
-![[./drone8.png]]
+![](./drone8.png)
 
 We can see two drones are active, each with its own dedicated network. For demonstrative purposes, we’ll target the `DRONE1` network and attempt to capture its WPA2 handshake. To focus on the target network specifically, note the channel number and the BSSID of the device. In the case of `DRONE1`, we have the following: 
 - Channel number: `3`
@@ -50,7 +50,7 @@ Type `ctrl+c` to kill the current `airodump-ng` instance and type the following 
 
 `airodump-ng wlan0mon -c 3 --bssid 02:00:00:00:04:00 -w drone1`
 
-![[./drone9.png]]
+![](./drone9.png)
 
 We can also see that a client (station) device is actively connected to the network with the MAC address of `00:00:00:00:00:01`!
 
@@ -63,15 +63,15 @@ Type the following command, where:
 
 `aireplay-ng wlan0mon --deauth 0 -a 02:00:00:00:04:00 -c 00:00:00:00:00:01`
 
-![[./drone10.png]]
+![](./drone10.png)
 
 When you see `WPA handshake: <MAC_address>` appear in the `airodump-ng` window, stop both the deauth attack and capture process by pressing `ctrl+C` in their respective panes.
 
-![[./drone11.png]]
+![](./drone11.png)
 
 Now let’s crack the WPA2 password! First, ensure that a capture file (`.cap`) was created.
 
-![[./drone12.png]]
+![](./drone12.png)
 
 If you have the `.cap` file, use `aircrack-ng` with a wordlist to attempt password recovery:
 
@@ -79,7 +79,7 @@ If you have the `.cap` file, use `aircrack-ng` with a wordlist to attempt passwo
 
 Give it a little bit of time, and eventually the password should be revealed!
 
-![[./drone13.png]]
+![](./drone13.png)
 
 Now that we've recovered the password, let's control the compromised drone! To run the controller, type:
 
@@ -87,11 +87,11 @@ Now that we've recovered the password, let's control the compromised drone! To r
 
 Each drone will be password protected, so make sure to select the drone that was successfully compromised. In our case, we compromised `DRONE1`, so we will select `dr1` and enter its password. 
 
-![[./drone14.png]]
+![](./drone14.png)
 
 If successful, you should be greeted with a `Controlling <drone_name>!` message. Move the drone around with the arrow keys and watch the drone move around on the graph!
 
-![[./drone15.png]]
-![[./drone16.png]]
+![](./drone15.png)
+![](./drone16.png)
 
 When done, press `q` to exit the drone controller, and repeat the steps to compromise the remaining drones.
