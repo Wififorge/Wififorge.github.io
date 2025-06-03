@@ -42,6 +42,7 @@ WifiForge provides hands-on wireless security labs covering various attack vecto
 | Lab 09 | Rogue Access Point | Phishing attacks with Wifiphisher |
 | Lab 10 | WPS Exploitation | WPS vulnerability exploitation |
 | Lab 11 | WEP Key Cracking | Legacy WEP security bypass |
+| Lab 12 | Drone Hacking    | Hacking a drones Telnet |
 
 ---
 
