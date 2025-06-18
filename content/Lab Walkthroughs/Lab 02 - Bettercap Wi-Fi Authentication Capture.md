@@ -10,7 +10,7 @@ In this lab we are continuing to learn about the tool Bettercap, specifically us
 ## Getting Started
 Select "**Bettercap Wi-Fi Authentication Capture**" from the menu. Allow up to 30 seconds to initialize the network. 
 
-![WifiForge main menu with Bettercap Wi-Fi Authentication Capture option](images/lab-02/02-main-menu.png)
+![[02-main-menu.png]]
 
 *Note: normally, when using Bettercap with physical network cards, it is necessary to use `airmon-ng check kill` to kill processes that may interfere with Bettercap. However, running this command in the mininet-wifi network is unnecessary and may cause the environment to fail.*
 
@@ -22,11 +22,11 @@ airmon-ng start Attacker-wlan0
 
 If the following prompt appears, input "**y**" and hit enter. 
 
-![Rfkill warning prompt requiring user confirmation](images/shared/01-rfkill-error.png)
+![[01-rfkill-error.png]]
 
 Successful initialization will appear as pictured below:
 
-![Monitor mode enabled successfully message](images/shared/01-monitor-enabled.png)
+![[01-monitor-enabled.png]]
 
 Verify that the interface has been put into monitor mode using the following command:
 
@@ -36,7 +36,7 @@ iwconfig
 
 As pictured below, the interface `wlan0mon` should now be present in monitor mode.
 
-![iwconfig output showing wlan0mon interface in monitor mode](images/shared/01-iwconfig.png)
+![[01-iwconfig.png]]
 
 Launch Bettercap with the following command. 
 
@@ -46,7 +46,7 @@ bettercap -iface wlan0mon
 
 You will be greeted by a prompt of with the name of the network interface. 
 
-![Bettercap initial startup interface](images/shared/01-bettercap-1.png)
+![[01-bettercap-1.png]]
 
 Access the help menu by typing: 
 
@@ -56,7 +56,7 @@ help
 
 Read this to get a better understanding of the tool. 
 
-![Bettercap module help documentation](images/lab-02/02-bettercap-help.png)
+![[02-bettercap-help.png]]
 
 This lab uses Bettercap's Wi-Fi module. Type the following to view a help menu specific to this module: 
 
@@ -64,7 +64,7 @@ This lab uses Bettercap's Wi-Fi module. Type the following to view a help menu s
 help wifi
 ```
 
-![Bettercap wifi module help documentation](images/lab-02/02-bettercap-wifi-help.png)
+![[02-bettercap-wifi-help.png]]
 
 Configure the console for a more convenient way to view your attack. 
 
@@ -77,7 +77,7 @@ set wifi.show.sort clients desc
 
 After running the commands, you should see the following on your screen. 
 
-![Bettercap interface display](images/shared/01-bettercap-1.png)
+![[01-bettercap-1.png]]
 
 Set the handshakes file.
 
@@ -107,7 +107,7 @@ wifi.deauth 76:df:71:67:40:2b
 
 Bettercap will display the number of handshakes it captures. Wait until at least one handshake is captured. 
 
-![Bettercap showing successfully captured handshake](images/lab-02/02-handshake-captured.png)
+![[02-handshake-captured.png]]
 
 Disable the Wi-Fi recon module:
 

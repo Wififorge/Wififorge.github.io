@@ -9,7 +9,7 @@ Crack captured NetNTLM hashes using John the Ripper with mask-based attacks for 
 
 Select "Ntlm John Crack" from the menu. Allow up to 30 seconds to initialize the network. 
 
-![WifiForge main menu with NTLM John Crack option](images/lab-08/08-main-menu.png)
+![[08-main-menu.png]]
 
 A single attacker pane will appear in your terminal. 
 
@@ -23,7 +23,7 @@ The above command is an example of using a *mask*. Masks point John in a directi
 
 Eventually, John will crack the password as seen in the screenshot below. 
 
-![John the Ripper cracking NETNTLM hashes with progress display](images/lab-08/08-john.png)
+![[08-john.png]]
 
 Use the `main_menu` command to return to the main menu and onto the next lab. 
 

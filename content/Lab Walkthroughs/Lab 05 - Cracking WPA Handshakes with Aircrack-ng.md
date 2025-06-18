@@ -9,7 +9,7 @@ Use aircrack-ng to crack WPA handshakes captured in previous labs using dictiona
 
 Select "Cracking WPA with Aircrack" from the main menu. Allow up to 30 seconds to initialize the network. 
 
-![WifiForge main menu with Cracking WPA with Aircrack option](images/lab-05/05-main-menu.png)
+![[05-main-menu.png]]
 
 A single attacker window will appear in your terminal. 
 
@@ -21,11 +21,11 @@ aircrack-ng -w /WifiForge/framework/lab_materials/rockyou.txt /WifiForge/Framewo
 
 If your capture file contains multiple networks, aircrack will find all the networks in the capture and ask which network the hash is associated with. Input the number associated with the WPA2_Network and hit enter if you are prompted.
 
-![Aircrack-ng showing multiple networks to select from](images/lab-05/05-networks.png)
+![[05-networks.png]]
 
 Allow for up to 30 seconds for the password to be revealed.
 
-![Aircrack-ng successfully finding the WPA key](images/lab-05/05-key-found.png)
+![[05-key-found.png]]
 
 You now are familiar with two different methods to collect and crack WPA2 keys. Use the `main_menu` command to return to the main menu and onto the next lab. 
 

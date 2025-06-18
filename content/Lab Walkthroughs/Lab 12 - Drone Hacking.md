@@ -9,11 +9,11 @@ In this advanced lab, we will explore wireless drone hacking techniques. This la
 
 Select `Drone Hacking` from the WifiForge menu. Allow a few seconds to initialize the network.
 
-![WifiForge main menu with Drone Hacking option](images/lab-12/12-main-menu.png)
+![[12-main-menu.png]]
 
 Once complete, a tmux session will start with three panes.
 
-![Multi-pane terminal view with three Attacker terminals for drone operations](images/lab-12/12-terminals.png)
+![[12-terminals.png]]
 
 Feel free to resize the panes by dragging the borders around. Start the graph that tracks drone positions by typing:
 
@@ -21,7 +21,7 @@ Feel free to resize the panes by dragging the borders around. Start the graph th
 python3 WifiForge/framework/lab_materials/graph-drones.py
 ```
 
-![Drone position tracking graph interface](images/lab-12/12-drone-graph.png)
+![[12-drone-graph.png]]
 
 ## Setting Up Monitor Mode
 In another pane, set your wireless interface to monitor mode. First, identify the interface name by typing:
@@ -32,7 +32,7 @@ iwconfig
 
 For this example, the interface name is `Attacker-wlan0`.
 
-![iwconfig output showing available wireless interfaces](images/lab-12/12-iwconfig.png)
+![[12-iwconfig.png]]
 
 After noting the interface name, start monitor mode by typing:
 
@@ -42,13 +42,13 @@ airmon-ng start Attacker-wlan0
 
 If prompted to automatically resolve any issues, type "y" and hit enter.
 
-![Rfkill warning prompt requiring user confirmation](images/lab-12/12-rfkill-prompt.png)
+![[12-rfkill-prompt.png]]
 
-![Monitor mode enabled successfully message](images/lab-12/12-monitor-enabled.png)
+![[12-monitor-enabled.png]]
 
 Verify the interface is now in monitor mode by running `iwconfig` again. The interface should be renamed to `wlan0mon`, and its `Mode:` should be set to `Monitor`.
 
-![iwconfig output showing wlan0mon interface in monitor mode](images/lab-12/12-monitor-verified.png)
+![[12-monitor-verified.png]]
 
 ## Scanning for Drone Networks
 With the device in monitor mode, run the following to scan for nearby wireless networks:
@@ -57,7 +57,7 @@ With the device in monitor mode, run the following to scan for nearby wireless n
 airodump-ng wlan0mon
 ```
 
-![Airodump-ng displaying available drone networks](images/lab-12/12-airodump-networks.png)
+![[12-airodump-networks.png]]
 
 We can see two drones are active, each with its own dedicated network. For demonstrative purposes, we'll target the `DRONE1` network and attempt to capture its WPA2 handshake. To focus on the target network specifically, note the channel number and the BSSID of the device. In the case of `DRONE1`, we have the following:
 
@@ -74,7 +74,7 @@ Type `ctrl+c` to kill the current `airodump-ng` instance and type the following 
 airodump-ng wlan0mon -c 3 --bssid 02:00:00:00:04:00 -w drone1
 ```
 
-![Airodump-ng focused on DRONE1 network showing connected stations](images/lab-12/12-airodump-focused.png)
+![[12-airodump-focused.png]]
 
 We can also see that a client (station) device is actively connected to the network with the MAC address of `00:00:00:00:00:01`!
 
@@ -91,16 +91,16 @@ Type the following command, where:
 aireplay-ng wlan0mon --deauth 0 -a 02:00:00:00:04:00 -c 00:00:00:00:00:01
 ```
 
-![Aireplay-ng performing deauthentication attack on drone network](images/lab-12/12-deauth-attack.png)
+![[12-deauth-attack.png]]
 
 When you see `WPA handshake: <MAC_address>` appear in the `airodump-ng` window, stop both the deauth attack and capture process by pressing `ctrl+C` in their respective panes.
 
-![Airodump-ng showing successful WPA handshake capture](images/lab-12/12-handshake-captured.png)
+![[12-handshake-captured.png]]
 
 ## Cracking the WPA2 Password
 Now let's crack the WPA2 password! First, ensure that a capture file (`.cap`) was created.
 
-![File listing showing captured handshake files](images/lab-12/12-capture-files.png)
+![[12-capture-files.png]]
 
 If you have the `.cap` file, use `aircrack-ng` with a wordlist to attempt password recovery:
 
@@ -110,7 +110,7 @@ aircrack-ng -w /WifiForge/framework/lab_materials/rockyou.txt ./<drone-file>.cap
 
 Give it a little bit of time, and eventually the password should be revealed!
 
-![Aircrack-ng successfully cracking the drone's WPA2 password](images/lab-12/12-password-cracked.png)
+![[12-password-cracked.png]]
 
 ## Taking Control of the Drone
 Now that we've recovered the password, let's control the compromised drone! To run the controller, type:
@@ -121,13 +121,13 @@ python3 /WifiForge/framework/lab_materials/control-drones.py
 
 Each drone will be password protected, so make sure to select the drone that was successfully compromised. In our case, we compromised `DRONE1`, so we will select `dr1` and enter its password.
 
-![Drone controller interface with authentication prompt](images/lab-12/12-drone-controller.png)
+![[12-drone-controller.png]]
 
 If successful, you should be greeted with a `Controlling <drone_name>!` message. Move the drone around with the arrow keys and watch the drone move around on the graph!
 
-![Successful drone control interface with movement commands](images/lab-12/12-drone-control.png)
+![[12-drone-control.png]]
 
-![Drone position tracking showing controlled movement](images/lab-12/12-drone-movement.png)
+![[12-drone-movement.png]]
 
 When done, press `q` to exit the drone controller, and repeat the steps to compromise the remaining drones.
 

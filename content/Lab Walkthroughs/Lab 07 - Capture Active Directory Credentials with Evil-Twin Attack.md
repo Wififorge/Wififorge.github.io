@@ -9,7 +9,7 @@ Deploy EAPHammer evil twin attacks to capture Active Directory credentials and N
 
 Select "Evil Twin" from the menu. Allow up to 30 seconds to initialize the network. 
 
-![WifiForge main menu with Evil Twin option](images/lab-07/07-main-menu.png)
+![[07-main-menu.png]]
 
 A single attacker pane will appear in your terminal. 
 
@@ -23,10 +23,10 @@ Run the following command to start Eaphammer.
 
 Running this command will result in the following output. The hashes should appear as seen below after being captured from an authenticating host. Allow up to a minute for this to occur. 
 
-![EAPHammer evil-twin access point setup and credential capture](images/lab-07/07-eaphammer.png)
+![[07-eaphammer.png]]
 The following will appear when the connection occurs. 
 
-![Captured Active Directory credential hashes](images/lab-07/07-hashes.png)
+![[07-hashes.png]]
 
 Hashes are saved to /WifiForge/framework/lab_materials/loot/ under the filename wpa_handshake_capture\[date]\[random_string].
 

@@ -10,7 +10,7 @@ Learn wireless reconnaissance using Bettercap to identify networks and capture W
 ## Getting Started with Bettercap
 Select "**Bettercap Recon**" from the menu. Allow up to 30 seconds to initialize the network. 
 
-![WifiForge main menu with Bettercap Recon option](images/shared/01-main-menu.png)
+![[01-main-menu.png]]
 
 *Note: normally, when using Bettercap with physical network cards, it is necessary to use `airmon-ng check kill` to kill processes that may interfere with Bettercap. However, running this command in the mininet-wifi network is unnecessary and may cause the environment to fail.*
 
@@ -22,11 +22,11 @@ airmon-ng start Attacker-wlan0
 
 If the following prompt appears, input "**y**" and hit enter. 
 
-![Rfkill warning prompt requiring user confirmation](images/shared/01-rfkill-error.png)
+![[01-rfkill-error.png]]
 
 Successful initialization will appear as pictured below:
 
-![Monitor mode enabled successfully message](images/shared/01-monitor-enabled.png)
+![[01-monitor-enabled.png]]
 
 Verify that the interface has been put into monitor mode using the following command. Look for `Mode:Monitor`:
 
@@ -36,7 +36,7 @@ iwconfig
 
 As pictured below, the interface `wlan0mon` should now be present in monitor mode.
 
-![iwconfig output showing wlan0mon interface in monitor mode](images/shared/01-iwconfig.png)
+![[01-iwconfig.png]]
 
 Launch Bettercap with the following command to interact with the interface `wlan0mon` the interface we previously put in monitor mode. 
 
@@ -46,7 +46,7 @@ bettercap -iface wlan0mon
 
 You will be greeted by a prompt of with the name of the network interface. 
 
-![Bettercap initial startup interface](images/shared/01-bettercap-1.png)
+![[01-bettercap-1.png]]
 
 The following commands will configure the console for a more understandable workflow to view the de-authentication attack.
 
@@ -59,7 +59,7 @@ set wifi.show.sort clients desc
 
 After running the commands, you should see the following on your screen. 
 
-![Bettercap interface configured with ticker and sorting options](images/lab-01/01-bettercap-2.png)
+![[01-bettercap-2.png]]
 
 Disable console logging using the following command. Note that the monitor interface has not stopped channel hopping. 
 
@@ -80,7 +80,7 @@ Next, force the interface to only operate on channel 6
 wifi.recon.channel 6
 ```
 
-![Bettercap showing network reconnaissance with channel locked to 6](images/lab-01/01-bettercap-3.png)
+![[01-bettercap-3.png]]
 
 Start the de-authentication attack using the command below: 
 
@@ -90,7 +90,7 @@ wifi.deauth 76:df:71:67:40:2b
 
 It may take a few seconds, but Bettercap will catch the handshake as shown below. A handshake is essentially an encrypted WPA2 password intercepted from between the client and router than can be decrypted offline.
 
-![Bettercap displaying captured WPA handshake](images/lab-01/01-bettercap-4.png)
+![[01-bettercap-4.png]]
 
 Your final packet count may differ from the screenshot above. 
 

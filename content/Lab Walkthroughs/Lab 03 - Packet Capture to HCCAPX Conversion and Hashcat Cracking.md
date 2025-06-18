@@ -9,11 +9,11 @@ Convert captured WPA handshakes to HCCAPX format and crack passwords using Hashc
 
 Select "Packet Capture To Hccapx Hashcat Cracking" from the menu. Allow up to 30 seconds to initialize the network. 
 
-![WifiForge main menu with Packet Capture to HCCAPX Hashcat Cracking option](images/lab-03/03-main-menu.png)
+![[03-main-menu.png]]
 
 Two panes will appear in the resulting screen. One represents the attacking machine "**Attacker**". The other panel represents the host machine from which you will launch a browser session. 
 
-![Split terminal view with Attacker and host_machine panes](images/lab-03/03-terminals.png)
+![[03-terminals.png]]
 
 Click the area within the "**host_machine**" panel to ensure that the host machine terminal is selected. Type the following command to open a browser window. 
 
@@ -23,7 +23,7 @@ Click the area within the "**host_machine**" panel to ensure that the host machi
 
 Ignore any errors that appear on the command line. Wait for a chrome browser to appear as seen below.
 
-![Chrome browser window launched for file conversion](images/lab-03/03-browser.png)
+![[03-browser.png]]
 
 Insert the following filepath into your browser.
 
@@ -33,11 +33,11 @@ file:///WifiForge/framework/lab_materials/hashcat.net/cap2hashcat/index.html
 
 The following site will appear in the browser window. 
 
-![Cap2hashcat web interface for file conversion](images/lab-03/03-browser-hashcat.png)
+![[03-browser-hashcat.png]]
 
 Select browse, navigate to the /WifiForge/Framework/loot/4whs file, and click convert.
 
-![File upload interface for handshake conversion](images/lab-03/03-browser-upload.png)
+![[03-browser-upload.png]]
 
 After clicking the convert button, click "Download." Close the Chrome window. 
 
@@ -51,11 +51,11 @@ hashcat -m22000 -a0 ~/Downloads/<YOUR-HCCAPX-HERE> /WifiForge/framework/lab_mate
 
 The following will appear on your screen. Hashcat will attempt to crack the password using the hash we recovered in the last lab. Allow for a few minutes for it to iterate through all the possible passwords.
 
-![Hashcat running password cracking against captured handshake](images/lab-03/03-hashcat-running.png)
+![[03-hashcat-running.png]]
 
 When it succeeds, the most likely passwords will be revealed (in this case, the password is december2022)
 
-![Hashcat results showing cracked password december2022](images/lab-03/03-hashcat-results.png)
+![[03-hashcat-results.png]]
 
 In either of the terminal panes, type `main_menu` to return to the main menu and onto the next lab. 
 
