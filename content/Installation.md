@@ -1,5 +1,6 @@
-# Installation & Setup Guide
-
+---
+title: Installation & Setup Guide
+---
 **Complete Installation and Configuration Guide for WifiForge**
 
 This comprehensive guide covers everything you need to install and configure WifiForge for safe Wi-Fi security training.
@@ -200,10 +201,13 @@ If you encounter any problems during installation, check our dedicated [Troubles
 ## Next Steps
 
 ### Ready to Learn!
-1. **Installation Complete**: You're ready to start learning!
-2. **Review Framework**: Check [Overview.md](Overview.md) for available labs and tools
-3. **Start Learning**: Begin with Lab 00 to learn framework basics
-4. **Need Help**: Use [Troubleshooting.md](Troubleshooting.md) if you encounter issues
+Your WifiForge environment is now installed and ready for safe, legal wireless security education. The framework provides a comprehensive platform for learning wireless security techniques in a controlled virtual environment.
+
+**Next Steps:**
+- **Explore the framework**: Check [Overview.md](Overview.md) for available labs and tools
+- **Start learning**: Begin with Lab 00 to learn framework basics
+- **Need help?**: Use [Troubleshooting.md](Troubleshooting.md) if you encounter issues
+- **Want to contribute?**: See our [Development Guide](Development.md)
 
 ### Framework Updates
 ```bash
@@ -218,8 +222,6 @@ git pull origin main
 ---
 
 **Installation Complete!**
-
-Your WifiForge environment is now installed and ready for safe, legal wireless security education. The framework provides a comprehensive platform for learning wireless security techniques in a controlled virtual environment.
 
 Always:
 - Use virtual environments only

@@ -1,6 +1,15 @@
+---
+title: Lab 06 - Airgeddon Denial of Service Beacon Attacks
+---
+
+**Estimated Time:** ~20-25 minutes  
+
+## Summary
+Launch denial of service attacks using Airgeddon's beacon flood capabilities to disrupt wireless network operations.
+
 Select "Airgeddon DoS" from the menu. Allow up to 30 seconds to initialize the network. 
 
-![[06-main-menu.png]]
+![WifiForge main menu with Airgeddon DoS option](images/lab-06/06-main-menu.png)
 
 A single attacker window will appear in your terminal. Type the following command to start airgeddon. 
 
@@ -8,17 +17,17 @@ A single attacker window will appear in your terminal. Type the following comman
 airgeddon
 ```
 
-![[06-airgeddon.png]]
+![Airgeddon initial startup screen with logo and information](images/lab-06/06-airgeddon.png)
 
 Follow any prompts until you are asked to select an interface to work with.
 
-![[06-interface.png]]
+![Airgeddon interface selection menu](images/lab-06/06-interface.png)
 
 Input 1 and hit enter to select Attacker-wlan0.
 
 The menu pictured below will appear. 
 
-![[06-airgeddon-menu.png]]
+![Airgeddon main menu with various attack options](images/lab-06/06-airgeddon-menu.png)
 
 From here, select option 2 to put the interface into monitor mode. Note that airgeddon may fail at this step.
 
@@ -29,27 +38,36 @@ airmon-ng start Attacker-wlan0
 
 Ensure that the selected interface after putting it into monitor mode is wlan0mon. 
 
-![[06-selected.png]]
+![Airgeddon showing selected interface in monitor mode](images/lab-06/06-selected.png)
 
 Select option 4 (DoS attacks menu) then select option 4 again (Explore for targets) and follow the prompts until airgeddon begins scanning for targets. Wait until Airgeddon finds the network (WPA2_Network) as see in the screenshot below.
 
-![[06-exploring.png]]
+![Airgeddon exploring and displaying available wireless targets](images/lab-06/06-exploring.png)
 
 Use \[CTRL + c] to stop scanning for networks. Airgeddon will provide a selection screen containing all the networks located in the previous step. Input the menu option associated with WPA2_NETWORK and hit the ENTER key.
 
-![[06-select-network.png]]
+![Airgeddon network selection screen with available targets](images/lab-06/06-select-network.png)
 
 After selecting the target network, Airgeddon will apply the configuration alongside another menu seen in the screenshot below. 
 
-![[06-settings.png]]
+![Airgeddon DoS attack configuration menu](images/lab-06/06-settings.png)
 
 Select option 8 (Beacon Flood Attack). If prompted to activate DoS pursuit mode, input N and hit ENTER. Hit ENTER again to start the attack. The terminal will fill up with messages similar to the ones pictured below.
 
-![[06-flood.png]]
+![Airgeddon beacon flood attack in progress](images/lab-06/06-flood.png)
 
 Service on this network has been denied!
 
 When finished, press \[CTRL + c] to close the window and exit airgeddon. Enter `main_menu` to return to the main menu. 
 
-NEXT LAB: [[Lab 07 - Capture Active Directory Credentials with Evil-Twin Attack]]
+## Lab Complete
+Congratulations! You have successfully completed Lab 06. You now understand:
+- Using Airgeddon for wireless denial of service attacks
+- Monitor mode configuration within Airgeddon
+- Target reconnaissance and selection
+- Beacon flood attack execution and impact
+
+---
+**PREVIOUS LAB:** [Lab 05 - Cracking WPA Handshakes with Aircrack-ng](Lab%2005%20-%20Cracking%20WPA%20Handshakes%20with%20Aircrack-ng.md)  
+**NEXT LAB:** [Lab 07 - Capture Active Directory Credentials with Evil-Twin Attack](Lab%2007%20-%20Capture%20Active%20Directory%20Credentials%20with%20Evil-Twin%20Attack.md)
 

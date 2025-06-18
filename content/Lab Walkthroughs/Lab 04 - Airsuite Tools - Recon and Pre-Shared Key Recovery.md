@@ -1,10 +1,21 @@
+---
+title: Lab 04 - Airsuite Tools - Recon and Pre-Shared Key Recovery
+---
+
+**Estimated Time:** ~30-35 minutes
+
+## Summary
+Master the Aircrack-ng suite for wireless reconnaissance, handshake capture, and password recovery using traditional airmon-ng, airodump-ng, and aireplay-ng tools.
+
+## Getting Started
+
 Select "Airsuite Recon and Key Discovery" from the menu. Allow up to 30 seconds to initialize the network. 
 
-![[04-main-menu.png]]
+![WifiForge main menu with Airsuite Recon and Key Discovery option](images/lab-04/04-main-menu.png)
 
 Two attacker panes will appear in your terminal window. 
 
-![[04-terminals.png]]
+![Split terminal view with two Attacker panes](images/lab-04/04-terminals.png)
 
 Within one of these panes, run the following command to put the Attacker-wlan0 interface into monitor mode.
 
@@ -14,11 +25,11 @@ airmon-ng start Attacker-wlan0
 
 If the following prompt appears, input "y" and hit enter. 
 
-![[01-rfkill-error.png]]
+![Rfkill warning prompt requiring user confirmation](images/shared/01-rfkill-error.png)
 
 Successful initialization will appear as pictured below. 
 
-![[01-monitor-enabled.png]]
+![Monitor mode enabled successfully message](images/shared/01-monitor-enabled.png)
 
 Check the new monitor interface. 
 
@@ -28,7 +39,7 @@ iwconfig
 
 As pictured below, wlan0mon should now be present and in monitor mode.
 
-![[01-iwconfig.png]]
+![iwconfig output showing wlan0mon interface in monitor mode](images/shared/01-iwconfig.png)
 
 Next, run airodump-ng to identify the the BSSID for WPA2_NETWORK.
 
@@ -38,7 +49,7 @@ airodump-ng wlan0mon
 
 The following should appear. Note the BSSID for the WPA2_NETWORK.
 
-![[04-airodump.png]]
+![Airodump-ng output showing available wireless networks](images/lab-04/04-airodump.png)
 
 After noting the BSSID for the WPA2_NETWORK, stop the process using \[CTRL + c]. Next, run airodump-ng to begin generating a capture file. 
 
@@ -48,13 +59,13 @@ airodump-ng wlan0mon -c 6 --bssid <WPA2_BSSID> -w wificap1
 
 Running the above command will provide the following output. 
 
-![[04-airodump-1.png]]
+![Airodump-ng capturing packets for specific network](images/lab-04/04-airodump-1.png)
 
 Leave this console running while performing the next steps.
 
 Take note of one of the station macs under the STATION column in the console output (see screenshot below). 
 
-![[04-stations.png]]
+![Airodump-ng showing connected stations](images/lab-04/04-stations.png)
 
 Run the following command in the other panel terminal. Replace \<WPA2_Network BSSID> and \<STATION MAC> with the WPA2_Network BSSID and any station mac respectively.
 
@@ -64,15 +75,15 @@ aireplay-ng wlan0mon -0 100 -a <WPA2_Network BSSID> -c <STATION MAC>
 
 After running this command, your terminal should be spammed with the messages pictured below. 
 
-![[04-deauth.png]]
+![Aireplay-ng sending deauthentication packets](images/lab-04/04-deauth.png)
 
 At this point, your window should appear as the following screenshot.
 
-![[04-deauth-waiting.png]]
+![Split view showing airodump-ng and aireplay-ng running simultaneously](images/lab-04/04-deauth-waiting.png)
 
 Wait until the first attacker terminal display the text highlighted in red below. Let both terminals run until the first attacker terminal displays the text shown in red below. 
 
-![[04-handshake.png]]
+![Airodump-ng showing WPA handshake captured](images/lab-04/04-handshake.png)
 
 In either attacker terminal, use \[CTRL + C] to stop any running processes. Run the following command. 
 
@@ -82,8 +93,18 @@ aircrack-ng -w /WifiForge/framework/lab_materials/rockyou.txt ./wificap1-01.cap
 
 It should not take long for aircrack to get the password.
 
-![[04-key-found.png]]
+![Aircrack-ng successfully cracking the WPA key](images/lab-04/04-key-found.png)
 
 In either of the terminal panes, type main_menu to return to the main menu and onto the next lab. 
 
-NEXT LAB: [[Lab 05 - Cracking WPA Handshakes with Aircrack-ng]]
+## Lab Complete
+Congratulations! You have successfully completed Lab 04. You now understand:
+- Using the complete Aircrack-ng suite for wireless attacks
+- Monitor mode setup and interface management
+- Network reconnaissance with airodump-ng
+- Targeted handshake capture techniques
+- Password cracking with aircrack-ng and wordlists
+
+---
+**PREVIOUS LAB:** [Lab 03 - Packet Capture to HCCAPX Conversion and Hashcat Cracking](Lab%2003%20-%20Packet%20Capture%20to%20HCCAPX%20Conversion%20and%20Hashcat%20Cracking.md)  
+**NEXT LAB:** [Lab 05 - Cracking WPA Handshakes with Aircrack-ng](Lab%2005%20-%20Cracking%20WPA%20Handshakes%20with%20Aircrack-ng.md)

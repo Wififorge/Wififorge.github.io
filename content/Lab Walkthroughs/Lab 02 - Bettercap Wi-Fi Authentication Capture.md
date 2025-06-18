@@ -1,10 +1,16 @@
-# Summary
-In this lab we aim to learn more and become more familiarized with Bettercap.
+---
+title: Lab 02 - Bettercap Wi-Fi Authentication Capture
+---
 
-# A Deeper Dive Into Bettercap
-Select "Bettercap Wifi Auth Capture" from the menu. Allow up to 30 seconds to initialize the network. 
+**Estimated Time:** ~25-30 minutes  
 
-![[02-main-menu.png]]
+## Summary
+In this lab we are continuing to learn about the tool Bettercap, specifically using it to capture Wi-Fi authentication handshakes.
+
+## Getting Started
+Select "**Bettercap Wi-Fi Authentication Capture**" from the menu. Allow up to 30 seconds to initialize the network. 
+
+![WifiForge main menu with Bettercap Wi-Fi Authentication Capture option](images/lab-02/02-main-menu.png)
 
 *Note: normally, when using Bettercap with physical network cards, it is necessary to use `airmon-ng check kill` to kill processes that may interfere with Bettercap. However, running this command in the mininet-wifi network is unnecessary and may cause the environment to fail.*
 
@@ -16,11 +22,11 @@ airmon-ng start Attacker-wlan0
 
 If the following prompt appears, input "**y**" and hit enter. 
 
-![[01-rfkill-error.png]]
+![Rfkill warning prompt requiring user confirmation](images/shared/01-rfkill-error.png)
 
-Successful initialization will appear as pictured below.
+Successful initialization will appear as pictured below:
 
-![[01-monitor-enabled.png]]
+![Monitor mode enabled successfully message](images/shared/01-monitor-enabled.png)
 
 Verify that the interface has been put into monitor mode using the following command:
 
@@ -30,7 +36,7 @@ iwconfig
 
 As pictured below, the interface `wlan0mon` should now be present in monitor mode.
 
-![[01-iwconfig.png]]
+![iwconfig output showing wlan0mon interface in monitor mode](images/shared/01-iwconfig.png)
 
 Launch Bettercap with the following command. 
 
@@ -40,25 +46,25 @@ bettercap -iface wlan0mon
 
 You will be greeted by a prompt of with the name of the network interface. 
 
-![[01-bettercap-1.png]]
+![Bettercap initial startup interface](images/shared/01-bettercap-1.png)
 
 Access the help menu by typing: 
 
-```
+```bash
 help
 ```
 
 Read this to get a better understanding of the tool. 
 
-![[02-bettercap-help.png]]
+![Bettercap module help documentation](images/lab-02/02-bettercap-help.png)
 
 This lab uses Bettercap's Wi-Fi module. Type the following to view a help menu specific to this module: 
 
-```
+```bash
 help wifi
 ```
 
-![[02-bettercap-wifi-help.png]]
+![Bettercap wifi module help documentation](images/lab-02/02-bettercap-wifi-help.png)
 
 Configure the console for a more convenient way to view your attack. 
 
@@ -71,7 +77,7 @@ set wifi.show.sort clients desc
 
 After running the commands, you should see the following on your screen. 
 
-![[01-bettercap-1.png]]
+![Bettercap interface display](images/shared/01-bettercap-1.png)
 
 Set the handshakes file.
 
@@ -101,7 +107,7 @@ wifi.deauth 76:df:71:67:40:2b
 
 Bettercap will display the number of handshakes it captures. Wait until at least one handshake is captured. 
 
-![[02-handshake-captured.png]]
+![Bettercap showing successfully captured handshake](images/lab-02/02-handshake-captured.png)
 
 Disable the Wi-Fi recon module:
 
@@ -121,4 +127,14 @@ Your final packet count may differ from the screenshot above. Note the BSSID of 
 
 Type ```exit``` to leave bettercap. Use the main_menu command to return to the main menu and onto the next lab. 
 
-NEXT LAB: [[Lab 03 - Packet Capture to HCCAPX Conversion and Hashcat Cracking]]
+## Lab Complete
+Congratulations! You have successfully completed Lab 02. You now understand:
+- Advanced Bettercap module configuration and help systems
+- Automated wireless scanning with ticker commands
+- Targeted deauthentication attacks against specific access points
+- Handshake capture and file management
+- Channel-specific wireless reconnaissance techniques
+
+---
+**PREVIOUS LAB:** [Lab 01 - Bettercap Recon](Lab%2001%20-%20Bettercap%20Recon.md)  
+**NEXT LAB:** [Lab 03 - Packet Capture to HCCAPX Conversion and Hashcat Cracking](Lab%2003%20-%20Packet%20Capture%20to%20HCCAPX%20Conversion%20and%20Hashcat%20Cracking.md)

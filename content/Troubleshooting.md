@@ -1,5 +1,6 @@
-# Troubleshooting Guide
-
+---
+title: Troubleshooting Guide
+---
 **Solutions for Common WifiForge Issues and Problems**
 
 > **⚠️ IMPORTANT SAFETY WARNING ⚠️**
@@ -462,7 +463,7 @@ If you've created snapshots:
 ### Before Asking for Help
 1. **Read the documentation**: Check [Overview.md](Overview.md) and [Installation.md](Installation.md) first
 2. **Search existing issues**: Look for similar problems in [GitHub Issues](https://github.com/blackhillsinfosec/WifiForge/issues)
-3. **Check for updates**: Ensure you're using the latest version from the repository
+3. **Check for updates**: Ensure you're using the latest version from the [repository](https://github.com/blackhillsinfosec/WifiForge)
 4. **Gather diagnostic information**: Use the diagnostic commands above to collect system info
 5. **Try basic solutions**: Work through the common issues in this guide
 
