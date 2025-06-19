@@ -93,6 +93,8 @@ sudo docker exec -it mininet-wifi /bin/bash
 ---
 
 ## Source Installation (Advanced)
+>[!INFO]
+>The setup.sh script may show failures when installing Openflow and Openvswitch on some distributions. These fail messages can usually be ignored. 
 
 ### When to Use Source Installation
 - **More Control**: Full control over your experience
