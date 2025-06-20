@@ -15,14 +15,19 @@ This comprehensive guide covers everything you need to install and configure Wif
 
 ## Compatibility
 
+> [!WARNING]
+> Wifi-Forge will not run on Kali Kernel release 6.12.13. Check your kernel version using `uname -r` and update if necessary. Running `sudo apt upgrade` followed by a reboot often updates the kernel on its own. 
+
+
 WifiForge works on the following Linux operating systems:
-- **Kali Linux** (Recommended)
+- **Kali Linux** 
 - **Parrot OS**
 - **Ubuntu**
 
 ---
 
 ## Docker Installation (Recommended)
+
 
 ### Why Docker is Recommended
 This is the **easiest and quickest method** of installation. Docker provides:
@@ -88,6 +93,8 @@ sudo docker exec -it mininet-wifi /bin/bash
 ---
 
 ## Source Installation (Advanced)
+>[!WARNING]
+>The setup.sh script may show failures when installing Openflow and Openvswitch on some distributions. These fail messages can usually be ignored. 
 
 ### When to Use Source Installation
 - **More Control**: Full control over your experience
