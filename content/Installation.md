@@ -28,6 +28,9 @@ WifiForge works on the following Linux operating systems:
 
 ## Docker Installation (Recommended)
 
+> [!WARNING]
+> As of 5/2025, the Wifi-Forge docker has been experiencing long load times when run on a Kali Linux host - we recommend using the docker container on an Ubuntu host until these issues can be resolved.
+
 
 ### Why Docker is Recommended
 This is the **easiest and quickest method** of installation. Docker provides:
