@@ -19,18 +19,13 @@ This comprehensive guide covers everything you need to install and configure Wif
 > Wifi-Forge will not run on Kali Kernel release 6.12.13. Check your kernel version using `uname -r` and update if necessary. Running `sudo apt upgrade` followed by a reboot often updates the kernel on its own. 
 
 
-WifiForge works on the following Linux operating systems:
+WifiForge works best on the following Linux operating systems:
 - **Kali Linux** 
-- **Parrot OS**
-- **Ubuntu**
+- **Mint**
 
 ---
 
 ## Docker Installation (Recommended)
-
-> [!WARNING]
-> As of 5/2025, the Wifi-Forge docker has been experiencing long load times when run on a Kali Linux host - we recommend using the docker container on an Ubuntu host until these issues can be resolved.
-
 
 ### Why Docker is Recommended
 This is the **easiest and quickest method** of installation. Docker provides:
@@ -159,7 +154,7 @@ cd airgeddon
 sudo bash airgeddon.sh
 ```
 
-#### For Ubuntu
+#### For Non-Kali Installations
 ```bash
 # 1. Import Kali APT Repositories
 sudo sh -c "echo 'deb https://http.kali.org/kali kali-rolling main non-free contrib' > /etc/apt/sources.list.d/kali.list"
