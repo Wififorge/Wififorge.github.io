@@ -1,6 +1,10 @@
 ---
 title: Lab 01 - Bettercap Recon
 ---
+>[!WARNING]
+>As of August 2025, Bettercap no longer works consistntly the lab environment. Skip ahead to lab 3 and use the provided 4whs file for the lab.
+
+
 
 **Estimated Time:** ~20-25 minutes  
 
