@@ -11,10 +11,10 @@ Select "Airgeddon DoS" from the menu. Allow up to 30 seconds to initialize the n
 
 ![[06-main-menu.png]]
 
-A single attacker window will appear in your terminal. Type the following command to start airgeddon. 
+A single attacker window will appear in your terminal. Type the following command to start airgeddon. Note that this lab uses a custom airgeddon script for ease of use in the lab environment. 
 
 ```
-airgeddon
+./framework/airgeddon-WifiForge-Cloud/airgeddon.sh
 ```
 
 ![[06-airgeddon.png]]
