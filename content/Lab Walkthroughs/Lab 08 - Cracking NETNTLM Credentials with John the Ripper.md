@@ -16,7 +16,7 @@ A single attacker pane will appear in your terminal.
 Run the following command to crack the NetNTLM hash found in the last lab. Note that this uses a wildcard for the capture filename, you may need to specify your filename directly if the file cannot be found. 
 
 ```
-john --format=netntlm /WifiForge/framework/loot/wpa_handshake_capture* --mask='Badpass?d' --min-length=7 --max-length=13 --pot=/WifiForge/Framework/loot/output.pot
+john --format=netntlm /WifiForge/framework/lab_materials/loot/wpa_handshake_capture* --mask='Badpass?d' --min-length=7 --max-length=13 --pot=/WifiForge/framework/lab_materials/loot/output.pot
 ```
 
 The above command is an example of using a *mask*. Masks point John in a direction to crack a password from a partially known one. In this case, John brute forces the password by appending a set of characters onto the phrase Badpass. Masks are usually useful if a pattern can be found among groups of passwords. 
