@@ -28,7 +28,7 @@ WifiForge is a Wi-Fi security training tool developed by **Black Hills InfoSec**
 
 WifiForge is a Wi-Fi security training framework that eliminates the traditional barriers to wireless security education. Built on mininet-wifi technology, it provides:
 
-- **13 Hands-On Labs**: From basic reconnaissance to advanced exploitation techniques
+- **9 Hands-On Labs**: From basic reconnaissance to advanced exploitation techniques
 - **Real Security Tools**: Aircrack-ng, Bettercap, Hashcat, Wifiphisher, and more
 - **Zero Hardware Required**: Complete virtual wireless network simulation
 - **Safe Learning Environment**: No interaction with real networks
@@ -39,7 +39,5 @@ WifiForge is a Wi-Fi security training framework that eliminates the traditional
 ## Mission
 
 Our goal at Black Hills Information Security is to remove any barriers preventing you the end user from learning about new topics. With the wireless world being a backbone of security it's important to understand attacks without the pay wall. This tool removes the need for any hardware or setup. In other words, it just werks.
-
-Be on the look out for more Forge tools down the road.
 
 ---
