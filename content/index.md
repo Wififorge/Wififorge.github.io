@@ -12,15 +12,15 @@ WifiForge is a Wi-Fi security training tool developed by **Black Hills InfoSec**
 | Lab                                                                                                                   | Topic                                                      | Duration |
 | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | -------- |
 | [Lab 00](Lab%20Walkthroughs/Lab%2000%20-%20Getting%20Started.md)                                                      | Getting Started                                            | ~10 min  |
-| [Lab 01](Lab%20Walkthroughs/Lab%2003%20-%20Packet%20Capture%20to%20HCCAPX%20Conversion%20and%20Hashcat%20Cracking.md) | Packet Capture to HCCAPX Conversion and Hashcat Cracking   | ~20 min  |
-| [Lab 02](Lab%20Walkthroughs/Lab%2004%20-%20Airsuite%20Tools%20-%20Recon%20and%20Pre-Shared%20Key%20Recovery.md)       | Airsuite Tools - Recon and Pre-Shared Key Recovery         | ~35 min  |
-| [Lab 03](Lab%20Walkthroughs/Lab%2005%20-%20Cracking%20WPA%20Handshakes%20with%20Aircrack-ng.md)                       | Cracking WPA Handshakes with Aircrack-ng                   | ~15 min  |
-| [Lab 04](Lab%20Walkthroughs/Lab%2006%20-%20Airgeddon%20Denial%20of%20Service%20Beacon%20Attacks.md)                   | Airgeddon Denial of Service Beacon Attacks                 | ~25 min  |
-| [Lab 05](Lab%20Walkthroughs/Lab%2007%20-%20Capture%20Active%20Directory%20Credentials%20with%20Evil-Twin%20Attack.md) | Capture Active Directory Credentials with Evil-Twin Attack | ~20 min  |
-| [Lab 06](Lab%20Walkthroughs/Lab%2008%20-%20Cracking%20NETNTLM%20Credentials%20with%20John%20the%20Ripper.md)          | Cracking NETNTLM Credentials with John the Ripper          | ~20 min  |
-| [Lab 07](Lab%20Walkthroughs/Lab%2009%20-%20Rogue%20AP%20with%20Wifiphisher.md)                                        | Rogue AP with Wifiphisher                                  | ~35 min  |
-| [Lab 08](Lab%20Walkthroughs/Lab%2011%20-%20WEP%20Key%20Cracking.md)                                                   | WEP Key Cracking                                           | ~30 min  |
-| [Lab 09](Lab%20Walkthroughs/Lab%2012%20-%20Drone%20Hacking.md)                                                        | Drone Hacking                                              | ~45 min  |
+| [Lab 01](Lab%20Walkthroughs/Lab%2001%20-%20Packet%20Capture%20to%20HCCAPX%20Conversion%20and%20Hashcat%20Cracking.md) | Packet Capture to HCCAPX Conversion and Hashcat Cracking   | ~20 min  |
+| [Lab 02](Lab%20Walkthroughs/Lab%2002%20-%20Airsuite%20Tools%20-%20Recon%20and%20Pre-Shared%20Key%20Recovery.md)       | Airsuite Tools - Recon and Pre-Shared Key Recovery         | ~35 min  |
+| [Lab 03](Lab%20Walkthroughs/Lab%2003%20-%20Cracking%20WPA%20Handshakes%20with%20Aircrack-ng.md)                       | Cracking WPA Handshakes with Aircrack-ng                   | ~15 min  |
+| [Lab 04](Lab%20Walkthroughs/Lab%2004%20-%20Airgeddon%20Denial%20of%20Service%20Beacon%20Attacks.md)                   | Airgeddon Denial of Service Beacon Attacks                 | ~25 min  |
+| [Lab 05](Lab%20Walkthroughs/Lab%2005%20-%20Capture%20Active%20Directory%20Credentials%20with%20Evil-Twin%20Attack.md) | Capture Active Directory Credentials with Evil-Twin Attack | ~20 min  |
+| [Lab 06](Lab%20Walkthroughs/Lab%2006%20-%20Cracking%20NETNTLM%20Credentials%20with%20John%20the%20Ripper.md)          | Cracking NETNTLM Credentials with John the Ripper          | ~20 min  |
+| [Lab 07](Lab%20Walkthroughs/Lab%2007%20-%20Rogue%20AP%20with%20Wifiphisher.md)                                        | Rogue AP with Wifiphisher                                  | ~35 min  |
+| [Lab 08](Lab%20Walkthroughs/Lab%2008%20-%20WEP%20Key%20Cracking.md)                                                   | WEP Key Cracking                                           | ~30 min  |
+| [Lab 09](Lab%20Walkthroughs/Lab%2009%20-%20Drone%20Hacking.md)                                                        | Drone Hacking                                              | ~45 min  |
 
 ---
 
