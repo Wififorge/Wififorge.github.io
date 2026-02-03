@@ -11,7 +11,7 @@ In this lab we will learn how to navigate the tool **WifiForge**. WifiForge is a
 Follow the [Installation instructions](../Installation.md) to get WifiForge installed on your system. It is recommended to use the Docker method from a compatible host operating system or virtual machine.
 
 ## Navigating the Main Menu
-Follow the steps in the [installation guide](../Installation.md) to launch WifiForge. Once running you should see the following menu: 
+Once running you should see the following menu: 
 
 ![[00-main-menu.png]]
 
