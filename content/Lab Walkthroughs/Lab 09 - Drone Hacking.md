@@ -17,7 +17,7 @@ Once complete, a tmux session will start with three panes.
 
 Feel free to resize the pane by dragging the borders around and start the graph that tracks drone positions by typing:
 
-`python3 WifiForge/framework/lab_materials/graph-drones.py`
+`python3 /wififorge/src/wififorge/labs/materials/graph-drones.py`
 
 ![[3-start-graph.png]]
 
@@ -87,7 +87,7 @@ Now let's crack the WPA2 password! First, ensure that a capture file (`.cap`) wa
 
 If you have the `.cap` file, use `aircrack-ng` with a wordlist to attempt password recovery:
 
-`aircrack-ng -w /WifiForge/framework/lab_materials/rockyou.txt ./<drone-file>.cap`
+`aircrack-ng -w /wififorge/src/wififorge/labs/materials/rockyou.txt ./<drone-file>.cap`
 
 Give it a little bit of time, and eventually the password should be revealed!
 
@@ -95,7 +95,7 @@ Give it a little bit of time, and eventually the password should be revealed!
 
 Now that we've recovered the password, let's control the compromised drone! To run the controller, type:
 
-`python3 /WifiForge/framework/lab_materials/control-drones.py`
+`python3 /wififorge/src/wififorge/labs/materials/control-drones.py`
 
 Each drone will be password protected, so make sure to select the drone that was successfully compromised. In our case, we compromised `DRONE1`, so we will select `dr1` and enter its password.
 

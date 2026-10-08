@@ -18,7 +18,7 @@ Note: The software and methods used to create these labs are strictly limited to
 Run the following command to start Eaphammer. 
 
 ```
-/WifiForge/framework/lab_materials/eaphammer -e CORP_NET --creds --interface a-wlan0
+/wififorge/src/wififorge/labs/materials/eaphammer -e CORP_NET --creds --interface a-wlan0
 ```
 
 Running this command will result in the following output. The hashes should appear as seen below after being captured from an authenticating host. Allow up to a minute for this to occur. 
@@ -28,7 +28,7 @@ The following will appear when the connection occurs.
 
 ![[07-hashes.png]]
 
-Hashes are saved to /WifiForge/framework/lab_materials/loot/ under the filename wpa_handshake_capture\[date]\[random_string].
+Hashes are saved to /wififorge/src/wififorge/labs/materials/loot/ under the filename wpa_handshake_capture\[date]\[random_string].
 
 Use the `main_menu` command to return to the main menu and onto the next lab.
 

@@ -18,7 +18,7 @@ Two panes will appear in the resulting screen. One represents the attacking mach
 Click the area within the "**host_machine**" panel to ensure that the host machine terminal is selected. Type the following command to open a browser window. 
 
 ```bash
-/WifiForge/framework/lab_materials/browser linux
+/wififorge/src/wififorge/labs/materials/browser linux
 ```
 
 Ignore any errors that appear on the command line. Wait for a chrome browser to appear as seen below.
@@ -28,14 +28,14 @@ Ignore any errors that appear on the command line. Wait for a chrome browser to 
 Insert the following filepath into your browser.
 
 ```bash
-file:///WifiForge/framework/lab_materials/hashcat.net/cap2hashcat/index.html
+file:///wififorge/src/wififorge/labs/materials/hashcat.net/cap2hashcat/index.html
 ```
 
 The following site will appear in the browser window. 
 
 ![[03-browser-hashcat.png]]
 
-Select browse, navigate to the /WifiForge/framework/lab_materials/loot/4whs file, and click convert.
+Select browse, navigate to the /wififorge/src/wififorge/labs/materials/loot/4whs file, and click convert.
 
 ![[03-browser-upload.png]]
 
@@ -46,7 +46,7 @@ Select your attacker machine by clicking in the top half of the terminal window.
 Within the attacker terminal, run the following command. Replace \<YOUR-HCCAPX-HERE\> with the HCCPAX file in your Downloads file. it will likely consist of a series of numbers with with the file type hc22000. 
 
 ```
-hashcat -m22000 -a0 ~/Downloads/<YOUR-HCCAPX-HERE> /WifiForge/framework/lab_materials/rockyou.txt --potfile-path /WifiForge/framework/lab_materials/loot/4whs.pot
+hashcat -m22000 -a0 ~/Downloads/<YOUR-HCCAPX-HERE> /wififorge/src/wififorge/labs/materials/rockyou.txt --potfile-path /wififorge/src/wififorge/labs/materials/loot/4whs.pot
 ```
 
 The following will appear on your screen. Hashcat will attempt to crack the password using the hash we recovered in the last lab. Allow for a few minutes for it to iterate through all the possible passwords.

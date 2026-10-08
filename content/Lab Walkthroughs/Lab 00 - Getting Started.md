@@ -18,10 +18,12 @@ Once running you should see the following menu:
 If this menu is not present on your machine, launch WifiForge with the following command. If the command does not work - ask for help.
 
 ```
-sudo python3 /WifiForge/WifiForge.py
+wififorge
 ```
 
-Use the **\[UP]** and **\[DOWN]** arrow keys to navigate the menu. Press **\[ENTER]** to select a lab. After selecting a lab, allow for up to 30 seconds for the network to build. When finished, your screen will appear similar to the following: 
+If you installed from source rather than Docker, use `sudo wififorge`.
+
+Use the **\[UP]** and **\[DOWN]** arrow keys (or **\[j]** and **\[k]**) to navigate the menu. Press **\[/]** to search for a lab by name and **\[ESC]** to clear the search. Press **\[ENTER]** to select a lab, and **\[q]** to quit WifiForge. After selecting a lab, allow for up to 30 seconds for the network to build. When finished, your screen will appear similar to the following: 
 
 ![[00-terminal.png]]
 

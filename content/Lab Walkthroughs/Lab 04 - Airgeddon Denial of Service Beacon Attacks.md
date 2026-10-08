@@ -14,7 +14,7 @@ Select "Airgeddon DoS" from the menu. Allow up to 30 seconds to initialize the n
 A single attacker window will appear in your terminal. Type the following command to start airgeddon. 
 
 ```
-/WifiForge/airgeddon-WifiForge-Cloud/airgeddon.sh
+airgeddon
 ```
 
 ![[06-airgeddon.png]]

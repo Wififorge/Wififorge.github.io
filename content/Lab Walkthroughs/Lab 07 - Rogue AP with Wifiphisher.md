@@ -64,7 +64,7 @@ In a real scenario in which a victim connects to a fake ESSID hosted by wifiphis
 Launch a browser using the following command within the host1 machine. 
 
 ```
-/WifiForge/framework/lab_materials/browser linux
+/wififorge/src/wififorge/labs/materials/browser linux
 ```
 
 Navigate to the IP address 10.0.0.1.
@@ -83,7 +83,7 @@ The password you entered will appear in the attacker console under the HTTP requ
 View a different login page by relaunching chrome with a windows user agent and browsing to 10.0.0.1.
 
 ```
-/WifiForge/framework/lab_materials/browser windows
+/wififorge/src/wififorge/labs/materials/browser windows
 ```
 
 Use the `main_menu` command to return to the main menu and onto the next lab. 

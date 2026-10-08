@@ -11,16 +11,15 @@ WifiForge is a Wi-Fi security training tool developed by **Black Hills InfoSec**
 
 ## Tools You Will Use
 
-- **Aircrack-ng Suite** (Labs 04, 05, 11): Complete wireless audit platform
-- **Bettercap** (Labs 01, 02): Modern network attack and monitoring framework
-- **Airgeddon** (Lab 06): Multi-use wireless security auditing tool
-- **Wifiphisher** (Lab 09): Automated phishing attacks against Wi-Fi networks
-- **John the Ripper** (Lab 08): Password cracking tool
-- **Hashcat** (Lab 03): Advanced password recovery tool
-- **Wifite** (Lab 10): Automated wireless auditing tool
-- **Eaphammer** (Lab 07): Evil-twin attack framework for capturing credentials
-- **iperf** (Lab 11): Network performance measurement and traffic generation
-- **Python Scripts** (Lab 12): Custom drone control and monitoring tools
+- **Aircrack-ng Suite** (Labs 02, 03, 08, 09): Complete wireless audit platform
+- **Bettercap** (Lab 03): Modern network attack and monitoring framework
+- **Hashcat** (Lab 01): Advanced password recovery tool
+- **Airgeddon** (Lab 04): Multi-use wireless security auditing tool
+- **Eaphammer** (Lab 05): Evil-twin attack framework for capturing credentials
+- **John the Ripper** (Lab 06): Password cracking tool
+- **Wifiphisher** (Lab 07): Automated phishing attacks against Wi-Fi networks
+- **iperf** (Lab 08): Network performance measurement and traffic generation
+- **Python Scripts** (Lab 09): Custom drone control and monitoring tools
 
 ---
 
@@ -33,15 +32,15 @@ WifiForge provides hands-on wireless security labs covering various attack vecto
 | Lab # | Focus Area | Tools & Techniques |
 |------------|------------|-------------------|
 | [Lab 00](Lab%20Walkthroughs/Lab%2000%20-%20Getting%20Started.md) | Getting Started | Framework navigation and basic usage |
-| [Lab 01](Lab%20Walkthroughs/Lab%2003%20-%20Packet%20Capture%20to%20HCCAPX%20Conversion%20and%20Hashcat%20Cracking.md) | Packet Capture & Hashcat | HCCAPX conversion and password cracking |
-| [Lab 02](Lab%20Walkthroughs/Lab%2004%20-%20Airsuite%20Tools%20-%20Recon%20and%20Pre-Shared%20Key%20Recovery.md) | Airsuite Tools | Recon and pre-shared key recovery |
-| [Lab 03](Lab%20Walkthroughs/Lab%2005%20-%20Cracking%20WPA%20Handshakes%20with%20Aircrack-ng.md) | WPA Handshake Cracking | Cracking WPA handshakes with Aircrack-ng |
-| [Lab 04](Lab%20Walkthroughs/Lab%2006%20-%20Airgeddon%20Denial%20of%20Service%20Beacon%20Attacks.md) | Denial of Service | Beacon attacks with Airgeddon |
-| [Lab 05](Lab%20Walkthroughs/Lab%2007%20-%20Capture%20Active%20Directory%20Credentials%20with%20Evil-Twin%20Attack.md) | Evil-Twin Attack | Capturing Active Directory credentials |
-| [Lab 06](Lab%20Walkthroughs/Lab%2008%20-%20Cracking%20NETNTLM%20Credentials%20with%20John%20the%20Ripper.md) | NETNTLM Cracking | Credential cracking with John the Ripper |
-| [Lab 07](Lab%20Walkthroughs/Lab%2009%20-%20Rogue%20AP%20with%20Wifiphisher.md) | Rogue Access Point | Phishing attacks with Wifiphisher |
-| [Lab 08](Lab%20Walkthroughs/Lab%2011%20-%20WEP%20Key%20Cracking.md) | WEP Key Cracking | Legacy WEP security bypass |
-| [Lab 09](Lab%20Walkthroughs/Lab%2012%20-%20Drone%20Hacking.md) | Drone Hacking | Wireless drone attack and control |
+| [Lab 01](Lab%20Walkthroughs/Lab%2001%20-%20Packet%20Capture%20to%20HCCAPX%20Conversion%20and%20Hashcat%20Cracking.md) | Packet Capture & Hashcat | HCCAPX conversion and password cracking |
+| [Lab 02](Lab%20Walkthroughs/Lab%2002%20-%20Airsuite%20Tools%20-%20Recon%20and%20Pre-Shared%20Key%20Recovery.md) | Airsuite Tools | Recon and pre-shared key recovery |
+| [Lab 03](Lab%20Walkthroughs/Lab%2003%20-%20Cracking%20WPA%20Handshakes%20with%20Aircrack-ng.md) | WPA Handshake Cracking | Cracking WPA handshakes with Aircrack-ng |
+| [Lab 04](Lab%20Walkthroughs/Lab%2004%20-%20Airgeddon%20Denial%20of%20Service%20Beacon%20Attacks.md) | Denial of Service | Beacon attacks with Airgeddon |
+| [Lab 05](Lab%20Walkthroughs/Lab%2005%20-%20Capture%20Active%20Directory%20Credentials%20with%20Evil-Twin%20Attack.md) | Evil-Twin Attack | Capturing Active Directory credentials |
+| [Lab 06](Lab%20Walkthroughs/Lab%2006%20-%20Cracking%20NETNTLM%20Credentials%20with%20John%20the%20Ripper.md) | NETNTLM Cracking | Credential cracking with John the Ripper |
+| [Lab 07](Lab%20Walkthroughs/Lab%2007%20-%20Rogue%20AP%20with%20Wifiphisher.md) | Rogue Access Point | Phishing attacks with Wifiphisher |
+| [Lab 08](Lab%20Walkthroughs/Lab%2008%20-%20WEP%20Key%20Cracking.md) | WEP Key Cracking | Legacy WEP security bypass |
+| [Lab 09](Lab%20Walkthroughs/Lab%2009%20-%20Drone%20Hacking.md) | Drone Hacking | Wireless drone attack and control |
 
 ---
 
