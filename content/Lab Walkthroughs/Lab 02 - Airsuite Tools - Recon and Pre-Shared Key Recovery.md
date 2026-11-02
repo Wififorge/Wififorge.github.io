@@ -47,7 +47,7 @@ Next, run airodump-ng to identify the the BSSID for WPA2_NETWORK.
 airodump-ng wlan0mon
 ```
 
-The following should appear. Note the BSSID for the WPA2_NETWORK.
+The following should appear. Note the BSSID for the WPA2_NETWORK; it should be `02:00:00:00:0B:00`. If yours is different, use your BSSID in place of `02:00:00:00:0B:00` in the commands below.
 
 ![[04-airodump.png]]
 
@@ -67,7 +67,7 @@ Take note of one of the station macs under the STATION column in the console out
 
 ![[04-stations.png]]
 
-Run the following command in the other panel terminal. 
+Run the following command in the other panel terminal. Replace `02:00:00:00:03:00` with the station MAC you noted if it is different. 
 
 ```
 aireplay-ng wlan0mon -0 100 -a 02:00:00:00:0B:00 -c 02:00:00:00:03:00
@@ -98,7 +98,7 @@ It should not take long for aircrack to get the password.
 In either of the terminal panes, type main_menu to return to the main menu and onto the next lab. 
 
 ## Lab Complete
-Congratulations! You have successfully completed Lab 04. You now understand:
+Congratulations! You have successfully completed Lab 02. You now understand:
 - Using the complete Aircrack-ng suite for wireless attacks
 - Monitor mode setup and interface management
 - Network reconnaissance with airodump-ng

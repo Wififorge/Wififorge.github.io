@@ -33,7 +33,7 @@ Hashes are saved to /wififorge/src/wififorge/labs/materials/loot/ under the file
 Use the `main_menu` command to return to the main menu and onto the next lab.
 
 ## Lab Complete
-Congratulations! You have successfully completed Lab 07. You now understand:
+Congratulations! You have successfully completed Lab 05. You now understand:
 - Setting up evil twin access points with EAPHammer
 - Capturing Active Directory credentials in enterprise environments
 - NetNTLM hash collection and storage

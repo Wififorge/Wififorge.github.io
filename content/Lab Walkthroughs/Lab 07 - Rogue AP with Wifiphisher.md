@@ -61,13 +61,13 @@ This command will not produce any output on the host1 terminal. However, in the 
 
 In a real scenario in which a victim connects to a fake ESSID hosted by wifiphisher, a fake login portal will popup through their default browser. In our lab environment, we will have to manually launch and connect to the browser to see what this fake login page looks like. 
 
-Launch a browser using the following command within the host1 machine. 
+Launch a browser on the fake portal using the following command within the host1 machine. 
 
 ```
-/wififorge/src/wififorge/labs/materials/browser linux
+/wififorge/src/wififorge/labs/materials/browser linux http://10.0.0.1
 ```
 
-Navigate to the IP address 10.0.0.1.
+The browser opens with a fresh profile every time, so it runs inside host1's network even if another Chrome window is already open. If no window appears, read the message the command prints; it explains how to fix a missing display. The browser loads 10.0.0.1 as shown below.
 
 ![[09-browser-navigation.png]]
 
@@ -80,16 +80,16 @@ The password you entered will appear in the attacker console under the HTTP requ
 
 ![[09-captured-credentials.png]]
 
-View a different login page by relaunching chrome with a windows user agent and browsing to 10.0.0.1.
+View a different login page by closing the browser and relaunching it with a Windows user agent.
 
 ```
-/wififorge/src/wififorge/labs/materials/browser windows
+/wififorge/src/wififorge/labs/materials/browser windows http://10.0.0.1
 ```
 
 Use the `main_menu` command to return to the main menu and onto the next lab. 
 
 ## Lab Complete
-Congratulations! You have successfully completed Lab 09. You now understand:
+Congratulations! You have successfully completed Lab 07. You now understand:
 - Creating convincing rogue access points with Wifiphisher
 - Deploying captive portal phishing attacks
 - Social engineering through fake wireless networks

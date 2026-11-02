@@ -89,7 +89,7 @@ The above command will begin attempting to crack the WEP key. Successful decrypt
 ![[11-wep-key.png]]
 
 ## Lab Complete
-Congratulations! You have successfully completed Lab 11. You now understand:
+Congratulations! You have successfully completed Lab 08. You now understand:
 - Exploiting WEP encryption vulnerabilities through traffic analysis
 - Using airodump-ng for WEP network reconnaissance
 - Generating network traffic with iperf for statistical attacks

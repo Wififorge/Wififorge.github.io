@@ -19,6 +19,14 @@ airgeddon
 
 ![[06-airgeddon.png]]
 
+> [!WARNING]
+> If airgeddon exits with a message such as `No graphics system was detected` or mentions xterm, it is running in xterm mode instead of tmux mode. This happens when the `airgeddon` command is an outdated symlink. Update the launcher by re-running `./install-system-deps.sh` from your WifiForge directory (`/wififorge`), or start airgeddon directly from its install directory in tmux mode:
+> ```
+> cd /opt/airgeddon-WifiForge-Cloud
+> AIRGEDDON_WINDOWS_HANDLING=tmux AIRGEDDON_AUTO_UPDATE=false bash ./airgeddon.sh
+> ```
+> If airgeddon is installed somewhere else, `readlink -f "$(command -v airgeddon)"` shows where.
+
 Follow any prompts until you are asked to select an interface to work with.
 
 ![[06-interface.png]]
@@ -61,7 +69,7 @@ Service on this network has been denied!
 When finished, press \[CTRL + c] to close the window and exit airgeddon. Enter `main_menu` to return to the main menu. 
 
 ## Lab Complete
-Congratulations! You have successfully completed Lab 06. You now understand:
+Congratulations! You have successfully completed Lab 04. You now understand:
 - Using Airgeddon for wireless denial of service attacks
 - Monitor mode configuration within Airgeddon
 - Target reconnaissance and selection

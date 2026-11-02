@@ -81,14 +81,22 @@ sudo docker rm -f mininet-wifi
 
 **`repository name must be lowercase`**: Docker image names must be all lowercase (`her3ticavi/wififorge`, not `Her3ticAVI/wififorge`).
 
+**A lab tool misbehaves after an update** (for example airgeddon reports `No graphics system was detected`, John reports `Unknown ciphertext format name requested`, or the drone graph exits with a plotext message): the container pulls new WifiForge code on start, but tools and Python packages are only installed when the image is built. Bring them up to date from inside the container:
+```bash
+cd /wififorge
+./install-system-deps.sh
+pip install --break-system-packages .
+```
+
 ## Option 2: Install from Source (Kali Linux)
 
 Installing from source is supported on Kali Linux, Debian and Ubuntu. Run every command below as root or with `sudo`.
 
 ### Step 1: Clone WifiForge
+Clone into `/wififorge`. The lab walkthroughs refer to files under `/wififorge/src/wififorge/labs/materials/`, the same location the Docker image uses, so cloning anywhere else breaks those paths.
 ```bash
-git clone -b 4.0.0 https://github.com/blackhillsinfosec/WifiForge.git
-cd WifiForge
+sudo git clone https://github.com/blackhillsinfosec/WifiForge.git /wififorge
+cd /wififorge
 ```
 
 ### Step 2: Install System Dependencies
@@ -103,6 +111,12 @@ sudo pip install --break-system-packages .
 ```
 
 ### Step 4: Start WifiForge
+Some labs open a browser window as root. Allow that once per desktop session, running this as your normal user (not with `sudo`):
+```bash
+xhost +SI:localuser:root
+```
+
+Then start WifiForge:
 ```bash
 sudo wififorge
 ```

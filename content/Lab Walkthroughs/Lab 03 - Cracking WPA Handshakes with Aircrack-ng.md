@@ -13,7 +13,7 @@ Select "Cracking WPA with Aircrack" from the main menu. Allow up to 30 seconds t
 
 A single attacker window will appear in your terminal. 
 
-Run the following command in this terminal to crack the key associated with the WPA handshake collected from the bettercap lab. 
+Run the following command in this terminal to crack the key associated with the WPA handshake bundled with WifiForge (`4whs-01.cap`, the same capture used in Lab 01). 
 
 ```
 aircrack-ng -w /wififorge/src/wififorge/labs/materials/rockyou.txt /wififorge/src/wififorge/labs/materials/loot/4whs-01.cap
@@ -30,7 +30,7 @@ Allow for up to 30 seconds for the password to be revealed.
 You now are familiar with two different methods to collect and crack WPA2 keys. Use the `main_menu` command to return to the main menu and onto the next lab. 
 
 ## Lab Complete
-Congratulations! You have successfully completed Lab 05. You now understand:
+Congratulations! You have successfully completed Lab 03. You now understand:
 - Using aircrack-ng for WPA handshake analysis
 - Dictionary-based password cracking techniques
 - Working with previously captured handshake files

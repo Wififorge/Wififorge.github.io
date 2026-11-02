@@ -21,6 +21,8 @@ Feel free to resize the pane by dragging the borders around and start the graph 
 
 ![[3-start-graph.png]]
 
+If the graph exits with a message about plotext, the installed plotext version is not compatible; run the `pip install` command the message prints and start the graph again.
+
 In another pane, set your wireless interface to monitor mode. First, identify the interface name by typing:
 
 `iwconfig`
@@ -69,15 +71,17 @@ In the third pane, we'll launch a deauthentication attack on the `DRONE1` networ
 
 Type the following command, where:
 
-- `--deauth 0` indicates deauthentication frames will be sent with no limit (0),
+- `--deauth 5` sends a short burst of five deauthentication frames,
 - `-a` is the access point MAC address (BSSID),
 - and `-c` is the client (station) MAC address.
 
-`aireplay-ng wlan0mon --deauth 0 -a 02:00:00:00:04:00 -c 00:00:00:00:00:01`
+`aireplay-ng wlan0mon --deauth 5 -a 02:00:00:00:04:00 -c 00:00:00:00:00:01`
 
 ![[10-deauth-attack.png]]
 
-When you see `WPA handshake: <MAC_address>` appear in the `airodump-ng` window, stop both the deauth attack and capture process by pressing `ctrl+C` in their respective panes.
+Keep the burst short. An endless flood (`--deauth 0`) knocks the client off again before it can finish reconnecting, so the four-way handshake never completes and `airodump-ng` never shows it. If no handshake appears after a burst, wait a few seconds for the client to reconnect and run the command again.
+
+When you see `WPA handshake: <MAC_address>` appear in the `airodump-ng` window, stop the capture process by pressing `ctrl+C` in its pane (and the deauth command, if it is still running).
 
 ![[11-wpa-handshake.png]]
 
@@ -88,6 +92,8 @@ Now let's crack the WPA2 password! First, ensure that a capture file (`.cap`) wa
 If you have the `.cap` file, use `aircrack-ng` with a wordlist to attempt password recovery:
 
 `aircrack-ng -w /wififorge/src/wififorge/labs/materials/rockyou.txt ./<drone-file>.cap`
+
+With the commands above, the capture file is `drone1-01.cap`.
 
 Give it a little bit of time, and eventually the password should be revealed!
 
@@ -129,7 +135,7 @@ It should be noted that the drone controller stops `airmon-ng` to restore networ
 When done, type `main_menu` to return to the lab selection.
 
 ## Lab Complete
-Congratulations! You have successfully completed Lab 12. You now understand:
+Congratulations! You have successfully completed Lab 09. You now understand:
 - Advanced wireless drone network reconnaissance and targeting
 - WPA2 handshake capture against mobile/drone networks
 - Deauthentication attacks for forcing reauthentication
